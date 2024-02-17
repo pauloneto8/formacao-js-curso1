@@ -1,0 +1,21 @@
+{
+    "name": "pauloneto/cursocomposer",
+    "description": "Projeto que busca os cursos no site da Alura",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Pauloneto\\Cursocomposer\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Paulo Neto",
+            "email": "pauloneto8@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.8",
+        "symfony/dom-crawler": "^5.4",
+        "symfony/css-selector": "^5.4"
+    }
+}

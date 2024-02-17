@@ -1,0 +1,29 @@
+<meta charset="UTF-8"></meta>
+<script>
+    alert('Bem-vindo ao jogo do número secreto!');
+    let numeroMaximo = 50;
+    let numeroSecreto = parseInt(Math.random() * numeroMaximo + 1);
+    console.log(numeroSecreto);
+    let chute;
+    let tentativas = 1;
+
+    //Enquanto o chute não for igual o número secreto:
+    while(chute != numeroSecreto){
+        chute = prompt(`Escolha um número entre 1 e ${numeroMaximo}.`);
+        if(numeroSecreto == chute){
+            break;
+        }else if(chute > numeroSecreto){
+            alert('Tente novamente! O número secreto é menor que: '+chute);
+            tentativas = tentativas + 1;
+        }else{
+            alert('Tente novamente! O número secreto é maior que: '+chute);
+            tentativas++;
+        }
+    }
+
+    //condição com operador ternário
+    let mensagem = tentativas > 1 ? 'tentativas' : 'tentativa';
+
+    alert(`Parabéns! O número secreto é: ${chute}. Você acertou com ${tentativas} ${mensagem}.`);
+
+</script>
